@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		<div class="row mt-4 justify-content-center" align="center">
+			<div class="col-8">
+				<form action="{% url 'edit_doubt' doubt.pk %}" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<input type="submit" class="btn btn-primary" value="Atualizar">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

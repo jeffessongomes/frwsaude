@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		{% if cases.all %}
+		<div class="pt-3 pb-3 mb-3 border-bottom">	
+			<div align="center">
+				<a href="{% url 'add_case' %}" class="btn btn-success">ADICIONAR</a>
+			</div>
+		</div>
+		{% endif %}
+		{% for case in cases %}
+		<div class="row d-flex justify-content-center border-bottom">
+			<div class="col-12">
+				<div class="d-flex justify-content-center mb-3">
+					<!-- <div class="font-weight-bold">{{case.name}}</div> -->
+					<img class="img-thumbnail" width="200" src="{{case.photo.url}}">
+				</div>
+			</div>
+			<div class="col-12 mb-2">
+				<div class="text-center">
+					<a href="{% url 'edit_case' case.pk %}" class="btn w-50 btn-primary">EDITAR</a>
+				</div>
+				<div class="text-center">
+					<a href="{% url 'delete_case' case.pk %}" class="btn w-50 mt-1 btn-danger">APAGAR</a>
+				</div>
+			</div>
+		</div>
+		{% empty %}
+		<div align="center">
+		<a href="{% url 'add_case' %}" class="btn btn-success">ADICIONAR</a>
+		</div>
+		{% endfor %}
+		{% if cases.all %}
+		<div class="pt-3 pb-3 mb-3 border-bottom">	
+			<div align="center">
+				<a href="{% url 'add_case' %}" class="btn btn-success">ADICIONAR</a>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</div>	
+{% endblock %}

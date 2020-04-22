@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		<div class="row justify-content-center pt-5">
+			<div class="col-6">
+				<div>
+					<div>
+						<h3 class="font-weight-bold text-center">ADICIONAR PERGUNTA:</h3>
+					</div>
+					<form action="{% url 'add_doubt' %}" method="post">
+						{% csrf_token %}
+						<input type="text" class="form-control" name="ask" placeholder="Pergunta">
+						<textarea type="textarea"  class="form-control mt-3" name="response" placeholder="Resposta" rows="4"></textarea>
+						<div class="d-flex justify-content-center mt-3">
+							<input type="submit" class="btn btn-success w-50" value="Enviar">
+						</div>					
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>	
+{% endblock %}

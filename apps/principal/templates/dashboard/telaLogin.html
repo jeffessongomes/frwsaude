@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Início - Help</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="{% static 'assets/css/estilo.css' %}">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <div id="form_login">
+            <div id="content">
+                <div class="pb-3">
+                    <h6 class="text-center text-dark border-bottom border-dark p-3 font-weight-bold">ENTRAR</h6>                </div>
+                {% if error == True %}
+                <div class="pb-3">
+                    <h4 class="text-center text-danger rounded border border-danger p-3 font-weight-bold">Wrong email or password!</h4>
+                </div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-2">
+                        <input type="email" name="email" placeholder="Digite seu e-mail..." required autofocus>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Digite sua senha..." required>
+                    </div>
+                   
+                    <input type="submit" value="Entrar">
+
+                    <a id="rec-senha" href="#" target="blank">Esqueceu a senha?</a>
+                </form>
+            </div>
+        <div>
+    </body>
+</html>

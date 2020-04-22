@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		{% for doubt in doubts %}
+		<div class="row w-100 mt-4 pt-4 border-top">
+
+			<div class="col-12 col-lg-8">
+				<div>
+					<h4 class="font-weight-bold text-center">		
+						{{doubt.ask}}
+					</h4>
+					<p class="text-justify">
+						{{doubt.response}}
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4">
+				<div class="">
+					<div class="text-center">
+						<a href="{% url 'edit_doubt' doubt.pk %}" class="btn w-50 ml-1 mr-1 font-weight-bold btn-primary">EDITAR</a>
+					</div>
+					<div class="text-center mt-1">
+						<a href="{% url 'delete_doubt' doubt.pk %}" class="btn w-50 font-weight-bold ml-1 mr-1 btn-danger">APAGAR</a>
+					</div>
+				</div>
+			</div>
+		{% empty %}
+		<a href="{% url 'add_doubt' %}" class="btn btn-success">ADICIONAR</a>
+		{% endfor %}
+
+		{% if doubts.all %}	
+			<div class="col-12 mt-4 text-center mb-4 border-top border-dark pt-4">
+				<a href="{% url 'add_doubt' %}" class="btn btn-success">ADICIONAR</a>
+			</div>
+		</div>
+		{% endif %}
+
+	</div>
+</div>	
+{% endblock %}

@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<div>
+					<h2 class="text-center font-weight-bold mt-5">
+						Adicionando um comentário
+					</h2>
+				</div>
+				<form action="{% url 'add_client' %}" method="post">
+					{% csrf_token %}
+					<input type="text" class="form-control" name="name" placeholder="Nome do cliente">
+					<textarea class="form-control mt-2" rows="3" name="details" placeholder="Detalhes"></textarea>
+					<div class="text-center">
+						<input type="submit" class="btn btn-success font-weight-bold mt-2" value="Enviar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

@@ -1,0 +1,70 @@
+@media only screen and (max-width: 968px) {
+  html{
+    overflow-x: hidden;
+  }
+  /* Mobile Header */
+
+  div#header{
+    background-image: url(../img/cover-start.jpg);
+  }
+
+  div#header .bg-dark-tec{
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  div#header .navbar-brand{
+    color: #FFF !important;
+  }
+
+  div#header .nav-link{
+    color: #FFF !important;
+  }
+
+  div#header div.header-info h2{
+    font-size: 1.8em;
+    color: #FFF;
+  }
+
+  div#header div.header-info p{
+    padding: 10px 50px;
+    color: #FFF;
+  }
+
+  div#header .mobile-bars{
+    border-color: #FFF;
+    color: #FFF !important;
+  }
+
+  /* Editando a segurança */
+  div.desc-start .yt-video{
+    width: 100%;
+  }
+  
+  /* comentarios */
+  div.client-comment{
+    flex-direction: column;
+  }
+  div#client-say h3{
+    font-size: 2em;
+  }
+
+  .img-cliente{
+    height: 100%;
+  }
+
+  /* ingredientes */
+  div#ingredientes .ingre-info h2{
+    font-size: 2em;
+  }
+
+  /* Uso */
+  div#container-uso .uso-info{
+    text-align: center;
+  }
+  div#container-uso .uso-info p{
+    padding: 0;
+  }
+  div#container-uso .uso-info h3{
+    font-size: 2em;
+  }
+}

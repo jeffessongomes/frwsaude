@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		{% for client in clients %}
+		<div class="row border-top pt-3 mt-4">
+			<div class="col-12 col-lg-8">
+				<div>
+					<h4 class="font-weight-bold text-center">{{client.name}}</h4>
+					<p class="text-justify">{{client.details}}</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4">
+				<div class="text-center">
+					<a href="{% url 'edit_client' client.pk %}" class="btn w-50 btn-primary">EDITAR</a>
+				</div>
+				<div class="text-center">
+					<a href="{% url 'delete_client' client.pk %}" class="btn w-50 mt-1 btn-danger">APAGAR</a>
+				</div>
+			</div>
+		</div>
+		{% empty %}
+		<div class="col-12">
+			<a href="{% url 'add_client' %}" class="btn btn-success">ADICIONAR</a>
+		</div>
+		{% endfor %}
+		{% if clients.all %}	
+		<div class="row border-top border-dark mt-2">
+			<div class="col-12 pt-2 text-center">
+				<a href="{% url 'add_client' %}" class="btn btn-success">ADICIONAR</a>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</div>	
+{% endblock %}

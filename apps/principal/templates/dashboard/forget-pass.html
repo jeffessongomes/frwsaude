@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block conteudo %}
+<div class="content">
+    <div class="container-fluid">
+        {% if error == True %}
+        <div class="pb-3">
+            <h4 class="text-center pt-2 pb-2 border border-danger rounded text-danger">E-mail não encontrado!</h4>
+        </div>
+        {% endif %}
+        {% if confirmEmail == True %}
+        <div>
+            <p class="text-center mb-2">Por favor, verifique o seu e-mail!</p>
+            <a href="{% url 'login' %}" class="" type="submit"><h2 class="text-center text-white d-block"> </h2> </span></button> </a>
+        </div>
+        {% else %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Email Address</label>
+                <input class="form-control" type="email" name="email" placeholder="Email">
+            </div>
+            <button class="btn btn-primary" type="submit">submit</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+<!-- end document-->

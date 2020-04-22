@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		{% if product_prize.all %}
+		<div class="mt-4 mb-2 pb-3 border-bottom">
+			<div align="center">
+				<a href="{% url 'add_product_prize' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+			</div>
+		</div>
+		{% endif %}
+		<h2 align="center">Formatação de Preços e Foto</h2>
+					
+		{% for product in product_prize %}
+		<div class="row border-bottom pt-3">
+			<div class="col-8">
+				<div>
+					<h4 class="text-center font-weight-bold">Quantidade: {{product.qnt}}</h4>
+					<p>{{product.preco_one}}</p>
+					<p>{{product.por_div}}</p>
+					<p>{{product.prize_div}}</p>
+					<div class="d-flex justify-content-center">
+						<img width="200" src="{{product.image.url}}">
+					</div>
+					<!-- qnt = image = preco_one = por_div = prize_div = buy_link -->
+
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="text-center">
+					<a href="{% url 'edit_product_prize' product.pk %}" class="btn w-50  btn-primary">EDITAR</a>
+				</div>
+				<div class="text-center">
+					<a href="{% url 'delete_product_prize' product.pk %}" class="btn w-50 mt-2 btn-danger">APAGAR</a>
+				</div>
+			</div>
+		</div>
+		{% empty %}
+		<div align="center">
+			<a href="{% url 'add_product_prize' %}" class="btn btn-success">ADICIONAR</a>
+		</div>
+		{% endfor %}
+		{% if product_prize.all %}
+			<div class="mt-4 mb-4 pt-3 border-top">
+				<div align="center">
+					<a href="{% url 'add_product_prize' %}" class="btn font-weight-bold btn-success">ADICIONAR</a>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+</div>	
+
+{% endblock %}

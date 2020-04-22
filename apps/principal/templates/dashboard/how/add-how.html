@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="row">
+		<div class="col-6">
+			<form action="{% url 'add_how' %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" class="btn btn-success" value="Enviar">
+			</form>
+		</div>
+		
+	</div>
+</div>	
+{% endblock %}

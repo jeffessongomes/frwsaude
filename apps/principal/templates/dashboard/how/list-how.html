@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="content">
+	<div class="container">
+		{% if hows.all %}
+		<div align="center">
+		<a href="{% url 'add_how' %}" class="btn btn-success">ADICIONAR</a>
+		</div>
+		{% endif %}
+		{% for how in hows %}
+		<div class="col-8 mb-4">
+			<ul>
+				<li>{{how.title}}</li>
+				<li>{{how.details}}</li>
+				<li><img width="200" src="{{how.image.url}}"></li>
+			</ul>
+			<a href="{% url 'edit_how' how.pk %}" class="btn btn-primary">EDITAR</a>
+			<a href="{% url 'delete_how' how.pk %}" class="btn btn-danger">APAGAR</a>
+		</div>
+		{% empty %}
+		<div align="center">
+			<a href="{% url 'add_how' %}" class="btn btn-success">ADICIONAR</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>	
+{% endblock %}

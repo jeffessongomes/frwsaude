@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+Hi {{user.username}},
+Please use the link confirm,
+
+CLICK HERE: http://localhost:8000/dashboard/confirme_password/{{user.pk}}/{{token}}
+
+{% endautoescape %}

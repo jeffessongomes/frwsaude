@@ -1,0 +1,474 @@
+body{
+  overflow-x: hidden;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/* Editando o cabecalho */
+
+div#header{
+  background-image: url(../img/cover-start2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+
+div#header .bg-menu-land{
+  background: transparent;
+}
+
+div#header .navbar-brand{
+  color: #212F3D !important;
+  font-weight: bold;
+}
+
+div#header .nav-link{
+  color: #212F3D !important;
+  font-weight: bold;
+}
+
+div#header div.header-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+div#header div.header-info h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #212F3D;
+}
+
+div#header div.header-info p{
+  padding: 10px 100px;
+  text-align: center;
+  color: #2C3E50;
+}
+
+.btn-techay{
+  background: rgb(34,193,195);
+  background: linear-gradient(101deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  color: #FFF;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: .2s;
+}
+
+.btn-cto:hover{
+  box-shadow: 0 0 20px #DADADA;
+  color: #FFF;
+}
+
+div.divide-to-sec{
+  background: transparent;
+}
+
+div.divide-to-sec .svg-edit{
+  fill: #ffffff;
+  transform: rotateY(0deg)
+}
+
+
+/* Editando a primeira chamada desc */
+.desc-start{
+  text-align: center;
+  padding: 40px 0;
+}
+
+div.desc-start .yt-video{
+  width: 100%;
+  height: 300px;
+}
+
+div.desc-start .desc-start-info{
+  padding: 40px 0px;
+}
+
+.desc-start h3{
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.desc-start p{
+  color: #AAA;
+  font-size: 1.3em;
+  padding: 0 3px;
+  text-align: center;
+}
+
+/* editando cliente */
+
+div.divide-to-client .svg-edit{
+  fill: #eeeeee;
+}
+
+.img-cliente{
+  object-fit: contain;
+  width: 100%;
+  height: 250px;
+}
+
+div#client-say{
+  background: #eeeeee;
+}
+
+div#client-say h3{
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 27px 0;
+}
+
+div#client-say p{
+  text-align: center;
+  font-size: 1.2em;
+  color: #7B7D7D;
+  padding-bottom: 27px;
+}
+
+/* comentarios dos clientes */
+div.client-comment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 10px 15px;
+  background-color: #F0F3F4;
+  border-radius: 5px;
+  height: 200px;
+}
+
+div.client-comment .photo-profile img{
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+
+div.client-comment .info-profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+div.client-comment .info-profile .name-profile{
+  text-align: center;
+}
+
+div.client-comment .info-profile .comment-profile p{
+  padding: 0 !important;
+  margin: 0;
+}
+
+div.divide-to-garantia{
+  background-color: #eeeeee;
+  width: 100%;
+}
+
+div.divide-to-garantia svg{
+  width: calc(300% + 1.3px);
+  height: 75px;
+  transform: rotateX(180deg);
+}
+
+div.divide-to-garantia .svg-edit{
+  fill: #2471a3;
+}
+
+/* editando garantia */
+div#garantia{
+  background-color: #2471A3;
+}
+
+div#garantia .img-garantia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+div#garantia .btn-garantia-cto{
+  padding: 10px 25px;
+  background: #154360;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 30px;
+  border: 1px solid #2471a3;
+  font-weight: bold;
+  transition: .3s;
+}
+
+div#garantia .btn-garantia-cto:hover{
+  color: #2471a9;
+  background: #FFF;
+  border: 1px solid #154360;
+}
+
+/* Ingredientes */
+div.divide-to-ingre{
+  width: 100%;
+}
+
+div.divide-to-ingre svg{
+  width: calc(300% + 1.3px);
+  height: 100px;
+}
+
+div.divide-to-ingre .svg-edit{
+  fill: #2471A3;
+  
+}
+
+/* Editando ingredientes */
+
+div#ingredientes .ingre-info{
+  padding: 20px 0;
+  text-align: center;
+}
+
+div#ingredientes .ingre-info h2{
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+
+div#ingredientes .ingre-info p{
+  font-size: 1.1em;
+  color: #AAA
+}
+
+div#ingredientes .ingrediente-self{
+  text-align: center;
+}
+
+div#ingredientes .ingrediente-self img{
+  height: 150px;
+}
+
+div#ingredientes .ingrediente-self h4{
+  padding-top: 10px;
+}
+
+div.divide-to-buy{
+  width: 100%;
+}
+
+div.divide-to-buy svg{
+  width: calc(139% + 1.3px);
+  height: 37px;
+}
+
+div.divide-to-buy .svg-edit{
+  fill: #eeeeee;
+}
+
+
+/* editando uso */
+div.divide-to-uso{
+  background: #eeeeee;
+}
+
+div.divide-to-uso svg{
+  width: calc(139% + 1.3px);
+  height: 37px;
+  transform: rotateX(180deg);
+}
+
+div.divide-to-uso .svg-edit{
+  fill: #FFF;
+}
+
+div#container-uso{
+  background: #eeeeee;
+  padding: 50px 0;
+}
+
+div#container-uso .uso-info{
+  padding: 50px 0;
+}
+
+div#container-uso .uso-info h3{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+div#container-uso .uso-info .font-negr{
+  font-weight: bold;
+}
+
+div#container-uso .uso-info p{
+  margin: 0;
+  padding: 0 25px 10px 0;
+  font-size: 1.2em;
+}
+
+div#container-uso .uso-info-passo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#container-uso .uso-info-passo img{
+  width: 250px;
+}
+
+div#container-uso .uso-info-passo p{
+  text-align: center;
+  font-size: 1.1em;
+  padding-top: 5px;
+}
+
+div#container-uso .container-info-passo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Comprar */
+div#container-buy{
+  background: url(../img/sky.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+div#container-buy .title{
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: bold;
+}
+
+div#container-buy .bg-buy{
+  background: rgba(52, 152, 219, 0.9);
+  padding-bottom: 40px;
+}
+
+div#container-buy .buy-unid{
+  background-color: #FFF;
+  text-align: center;
+  border-radius: 10px;
+}
+
+div#container-buy .buy-unid h3{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 100% 100%;
+  background-color: #5DADE2;
+  color: #FFF;
+}
+
+div#container-buy .buy-unid p{
+  padding: 0;
+  margin: 0;
+}
+
+div#container-buy .buy-unid p .font-negr{
+  font-weight: bold;
+}
+
+div#container-buy .buy-unid h2{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+div#container-buy .buy-unid .img-produto{
+  height: 300px;
+}
+
+div#container-buy .buy-unid .img-produto img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+div#container-buy .buy-unid a{
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 100% 100% 10px 10px;
+  background-color: #5DADE2;
+  color: #FFF;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 1.7em;
+  transition: .2s;
+}
+
+div#container-buy .buy-unid a:hover{
+  background-color: #154360;
+}
+
+/* Duvidas */
+
+div#container-duvidas{
+  margin: 50px 0;
+}
+
+div#container-duvidas .btn-link{
+  text-decoration: none;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+
+div#container-duvidas .info-duvidas h3{
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+/* footer */
+div.divide-to-footer .svg-edit{
+  fill: #2471a3;
+}
+
+div#footer{
+  background: #2471a3;
+}
+
+div#footer .text-footer{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #FFF;
+  text-align: center;
+}
+
+div#footer .img-seguro{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+div#footer .img-seguro img{
+  border-radius: 20px;
+}
+
+div#footer .img-logo-techay{
+  display: flex;
+  justify-content: center;
+}
+
+div#footer .logo-techay{
+  width: 140px;
+}
