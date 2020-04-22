@@ -31,10 +31,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">COMPRE AQUI<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#container-buy">COMPRE AQUI<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">INGREDIENTES<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#ingredientes">SOBRE<span class="sr-only">(current)</span></a>
               </li>
             </ul>
           </div>
@@ -100,7 +100,7 @@
         <div class="col-12">
           <div class="client-info">
             <h3>Nossos Clientes Estão Satisfeitos?</h3>
-            <p>Veja o que dizem os clientes mais sorridentes do Brasil:</p>
+            <p>Veja o que dizem:</p>
           </div>
         </div>
       </div>
@@ -170,10 +170,10 @@
   </div>
   <div id="garantia">
     <div class="img-garantia">
-      <img src="{% static 'img/garantia.png' %}" />
-      <div class="btn-garantia">
-        <a class="btn-garantia-cto" href="#">Sorriso com garantia</a>
-      </div>
+      <img src="{% static 'img/garantia.jpeg' %}" />
+      <p>
+        Mascaras de Proteção regulamentadas pela RDC ANVISA n° 356 de 23/03/2020
+      </p>
     </div>
   </div>
   <div class="divide-to-ingre">
@@ -189,7 +189,7 @@
       <div class="row">
         <div class="col-12">
           <div class="ingre-info">
-            <h2>Ingredientes Que Você Entende</h2>
+            <h2>Sobre</h2>
             <!-- <p>
               {% for ingredient in ingredients %}
                 {{ingredient}}; 
@@ -217,44 +217,6 @@
         c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
         c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
     </svg>
-  </div>
-  <div id="container-uso">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class="uso-info">
-            <h3>
-              {{how_text.title}}
-            </h3>
-            <p>
-              <span class="font-negr">
-                {{how_text.subtitle}}
-              </span>
-            </p>
-            <p>
-              {{how_text.details}}
-            </p>
-            <div class="pt-4 pb-4">
-              <a href="#" class="btn-cto btn-techay">COMPRE O SEU</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="container-info-passo">
-            <div class="row">
-              {% for how in hows %}
-              <div class="col-12 col-lg-6">
-                <div class="uso-info-passo">
-                  <img src="{{how.image.url}}" />
-                  <p>{{how.details}}</p>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <div id="container-buy">
     <div class="bg-buy">

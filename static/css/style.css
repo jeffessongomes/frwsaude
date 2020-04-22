@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -21,12 +25,12 @@ div#header .bg-menu-land{
 }
 
 div#header .navbar-brand{
-  color: #212F3D !important;
+  color: #FFF !important;
   font-weight: bold;
 }
 
 div#header .nav-link{
-  color: #212F3D !important;
+  color: #FFF !important;
   font-weight: bold;
 }
 
@@ -43,18 +47,18 @@ div#header div.header-info h2{
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.5em;
-  color: #212F3D;
+  color: #FFF;
 }
 
 div#header div.header-info p{
   padding: 10px 100px;
   text-align: center;
-  color: #2C3E50;
+  color: #FFF;
 }
 
 .btn-techay{
   background: rgb(34,193,195);
-  background: linear-gradient(101deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(101deg, rgba(94,203,195,1) 0%, rgba(153,197, 95,1) 100%);
   color: #FFF;
   font-weight: bold;
   padding: 8px 16px;
@@ -182,12 +186,12 @@ div.divide-to-garantia svg{
 }
 
 div.divide-to-garantia .svg-edit{
-  fill: #2471a3;
+  fill: #FFF;
 }
 
 /* editando garantia */
 div#garantia{
-  background-color: #2471A3;
+  background-color: #FFF;
 }
 
 div#garantia .img-garantia{
@@ -196,6 +200,15 @@ div#garantia .img-garantia{
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+}
+
+div#garantia .img-garantia p{
+  padding: 5px 200px;
+  text-align: center;
+}
+
+div#garantia .img-garantia img{
+  width: 40%;
 }
 
 div#garantia .btn-garantia-cto{
@@ -226,7 +239,7 @@ div.divide-to-ingre svg{
 }
 
 div.divide-to-ingre .svg-edit{
-  fill: #2471A3;
+  fill: #FFF;
   
 }
 
