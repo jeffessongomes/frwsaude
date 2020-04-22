@@ -7,9 +7,9 @@ from django.contrib.auth import login, authenticate, logout
 
 from apps.inicial.models import Doubt, Client, PhotoProdutoAfterBefore
 from .models import Product, Ingredients, Contact, Initial, How_Use, Video_Description, How_Use_Text, TecDashImages
-from .models import ProductsPrize
+from .models import ProductsPrize, Footer
 from .forms import DoubtForm, ClientForm, ProductForm, IngredientsForm, CaseForm, VideoDescriptionForm
-from .forms import InitialForm, HowUseForm, HowUseTextForm, ProductPrizeForm
+from .forms import InitialForm, HowUseForm, HowUseTextForm, ProductPrizeForm, FooterForm
 
 from django.core.mail import send_mail
 from django.core import mail
@@ -418,6 +418,30 @@ def edit_initial(request):
   data['form'] = form; data['initial'] = initial;
 
   return render(request, 'dashboard/initial/edit-initial.html', data)
+
+
+# crud footer
+@login_required(login_url='login')
+def edit_footer(request):
+  data = {}
+  
+  footer = Footer.objects.get(pk=1)
+  
+  if request.method == 'POST':
+    form = FooterForm(data=request.POST, instance=footer)
+    if form.is_valid():
+      form.save()
+      return redirect('index')
+    else:
+      
+     HttpResponse(json.dumps(form.errors))
+  else:
+    form = FooterForm(instance=footer)
+
+  data['form'] = form; data['footer'] = footer;
+
+  return render(request, 'dashboard/footer/edit-footer.html', data)
+
 
 # crud How Use
 @login_required(login_url='login')

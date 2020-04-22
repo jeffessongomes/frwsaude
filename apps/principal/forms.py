@@ -1,6 +1,7 @@
 from django import forms
 from apps.inicial.models import Doubt, Client, PhotoProdutoAfterBefore
 from .models import Product, Ingredients, Contact, Initial, How_Use, How_Use_Text, Video_Description, ProductsPrize
+from .models import Footer
 
 
 class DoubtForm(forms.ModelForm):
@@ -13,7 +14,7 @@ class DoubtForm(forms.ModelForm):
       
     }
     labels = {'ask': "Pergunta",
-    		  'response': "Resposta",
+          'response': "Resposta",
     }
 
 
@@ -27,7 +28,7 @@ class ClientForm(forms.ModelForm):
       
     }
     labels = {'name': "Nome",
-    		  'details': "Detalhes",
+          'details': "Detalhes",
     }
 
 class ProductForm(forms.ModelForm):
@@ -36,13 +37,13 @@ class ProductForm(forms.ModelForm):
     fields = '__all__'
     widgets = {
       'name': forms.TextInput(attrs={'class':'form-control', }),
-      'price': forms.NumberInput(attrs={'class':'form-control'}),
-      'ingredients': forms.SelectMultiple(attrs={'class':'form-control', 'required':False}),
+      'price': forms.HiddenInput(attrs={'class':'form-control'}),
+      'ingredients': forms.HiddenInput(attrs={'class':'form-control', 'required':False}),
       'image': forms.FileInput(attrs={'class':'form-control'}),
       'details': forms.Textarea(attrs={'class':'form-control'})
     }
     labels = {'name': "Nome", 'price': "Preço", 'ingredients': "Ingredientes",
-    		  'image': "Imagem", 'details': "Detalhes",
+          'image': "Imagem", 'details': "Detalhes",
     }
 
 class IngredientsForm(forms.ModelForm):
@@ -112,12 +113,26 @@ class ProductPrizeForm(forms.ModelForm):
     model = ProductsPrize
     fields = '__all__'
     widgets = {
-    	'qnt': forms.TextInput(attrs={'class':'form-control'}),
-    	'image': forms.FileInput(attrs={'class':'form-control'}),
-    	'preco_one': forms.TextInput(attrs={'class':'form-control'}),
-    	'por_div': forms.TextInput(attrs={'class':'form-control'}),
-      	'prize_div': forms.TextInput(attrs={'class':'form-control'}),
-      	'buy_link': forms.TextInput(attrs={'class':'form-control'}),
+      'qnt': forms.TextInput(attrs={'class':'form-control'}),
+      'image': forms.FileInput(attrs={'class':'form-control'}),
+      'preco_one': forms.TextInput(attrs={'class':'form-control'}),
+      'por_div': forms.TextInput(attrs={'class':'form-control'}),
+        'prize_div': forms.TextInput(attrs={'class':'form-control'}),
+        'buy_link': forms.TextInput(attrs={'class':'form-control'}),
       }
     labels = {'qnt': "Quantidade", 'image': "Imagem", 'preco_one': "Preço Único", 
-    		 'por_div': "Dividido por", 'prize_div': "Preço Dividido", 'buy_link': "Link da Compra"}
+         'por_div': "Dividido por", 'prize_div': "Preço Dividido", 'buy_link': "Link da Compra"}
+
+
+class FooterForm(forms.ModelForm):
+    class Meta:
+        model = Footer
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(FooterForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            if field.widget.attrs.get('class'):
+                field.widget.attrs['class'] += ' form-control'
+            else:
+                field.widget.attrs['class']='form-control'

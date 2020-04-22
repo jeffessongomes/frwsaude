@@ -9,7 +9,7 @@ class Ingredients(models.Model):
 
 class Product(models.Model):
 	name = models.CharField(max_length=255)
-	price = models.IntegerField(null=True, blank=True)
+	price = models.IntegerField(null=True, blank=True, default=0)
 	ingredients = models.ManyToManyField(Ingredients, blank=True)
 	image = models.ImageField(upload_to='image', null=True)
 	details = models.TextField(null=True)
@@ -72,3 +72,7 @@ class ProductsPrize(models.Model):
 
 	def __str__(self):
 		return self.preco_one
+
+
+class Footer(models.Model):
+	text = models.TextField()

@@ -1,6 +1,11 @@
 from django.contrib import admin
 from .models import Product, Ingredients, Contact, Initial, How_Use, Video_Description, How_Use_Text, TecDashImages, ProductsPrize
+from .models import Footer
 
+
+
+
+admin.site.register(Footer)
 admin.site.register(Product)
 admin.site.register(Ingredients)
 admin.site.register(Contact)
