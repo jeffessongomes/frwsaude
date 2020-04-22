@@ -21,16 +21,16 @@ div#header{
 }
 
 div#header .bg-menu-land{
-  background: transparent;
+  background: #FFF;
 }
 
-div#header .navbar-brand{
-  color: #FFF !important;
-  font-weight: bold;
+div#header .navbar-brand img{
+  height: 40px;
+
 }
 
 div#header .nav-link{
-  color: #FFF !important;
+  color: #154360 !important;
   font-weight: bold;
 }
 
