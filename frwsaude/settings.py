@@ -25,7 +25,7 @@ SECRET_KEY = '##$*u6br@gb)map_365lw)e%h)3n6!13y(s0#d1ly8@a#+y-q!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,12 +76,34 @@ WSGI_APPLICATION = 'frwsaude.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'frwsaude',
+#        'USER': 'frwsaude',
+#        'PASSWORD': 'techay1234', # no host
+#    #'PASSWORD': 'pnySk@NiC5h8pki', # localhost testes
+#        'HOST': 'mysql.frwsaude.net',   # Or an IP Address that your DB is hosted on
+#        'PORT': '3306',
+#        'OPTIONS': {
+#            'sql_mode': 'traditional',
+#        }
+#    }
+#}
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'frwsaude',
+        'USER': 'frwsaude',
+        'PASSWORD': 'techay1234',
+        'HOST': 'pgsql.frwsaude.net',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
@@ -122,6 +144,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
+    '/home/frwsaude/apps_wsgi/frwsaude/static'
 ] 
 
 STATIC_URL = '/static/'
@@ -143,3 +166,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 PASSWORD_RESET_TIMEOUT_DAYS = 1
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+	
