@@ -13,7 +13,7 @@ a:hover{
 /* Editando o cabecalho */
 
 div#header{
-  background-image: url(../img/cover-start2.jpg);
+  background-image: url(../img/mulher-mask.jpeg);
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -47,13 +47,13 @@ div#header div.header-info h2{
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.5em;
-  color: #FFF;
+  color: #000;
 }
 
 div#header div.header-info p{
   padding: 10px 100px;
   text-align: center;
-  color: #FFF;
+  color: #000;
 }
 
 .btn-techay{
