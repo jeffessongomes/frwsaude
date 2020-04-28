@@ -13,7 +13,7 @@ a:hover{
 /* Editando o cabecalho */
 
 div#header{
-  background-image: url(../img/mulher-mask.jpeg);
+  background: #FFF;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -39,7 +39,7 @@ div#header div.header-info{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60vh;
+  height: 50vh;
 }
 
 div#header div.header-info h2{
@@ -51,9 +51,24 @@ div#header div.header-info h2{
 }
 
 div#header div.header-info p{
-  padding: 10px 100px;
+  padding: 0 100px;
   text-align: center;
-  color: #000;
+  color: #E74C3C;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+div#header div.container-img-cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+
+}
+
+div#header div.header-info .container-img-desc .img-cover-desc{
+  width: 300px;
 }
 
 .btn-techay{
@@ -72,11 +87,11 @@ div#header div.header-info p{
 }
 
 div.divide-to-sec{
-  background: transparent;
+  background: #fff;
 }
 
 div.divide-to-sec .svg-edit{
-  fill: #ffffff;
+  fill: #eee;
   transform: rotateY(0deg)
 }
 
@@ -85,6 +100,7 @@ div.divide-to-sec .svg-edit{
 .desc-start{
   text-align: center;
   padding: 40px 0;
+  background-color: #eee;
 }
 
 div.desc-start .yt-video{
@@ -110,9 +126,12 @@ div.desc-start .desc-start-info{
 }
 
 /* editando cliente */
+div.divide-to-client{
+  background-color: #eee;
+}
 
 div.divide-to-client .svg-edit{
-  fill: #eeeeee;
+  fill: #fff;
 }
 
 .img-cliente{
@@ -175,7 +194,7 @@ div.client-comment .info-profile .comment-profile p{
 }
 
 div.divide-to-garantia{
-  background-color: #eeeeee;
+  background-color: #eee;
   width: 100%;
 }
 

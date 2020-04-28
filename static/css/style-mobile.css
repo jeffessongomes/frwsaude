@@ -5,11 +5,11 @@
   /* Mobile Header */
 
   div#header{
-    background-image: url(../img/cover-start.jpg);
+    background-image: #FFF;
   }
 
   div#header .bg-dark-tec{
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
   }
 
   div#header .navbar-brand{
@@ -22,12 +22,13 @@
 
   div#header div.header-info h2{
     font-size: 1.8em;
-    color: #FFF;
+    color: #000;
+    font-weight: bold;
   }
 
   div#header div.header-info p{
     padding: 10px 50px;
-    color: #FFF;
+    color: #E74C3C;
   }
 
   div#header .mobile-bars{

@@ -93,15 +93,22 @@ WSGI_APPLICATION = 'frwsaude.wsgi.application'
 #}
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'frwsaude',
+#         'USER': 'frwsaudeuser',
+#         'PASSWORD': 'frwsaude',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'frwsaude',
-        'USER': 'frwsaudeuser',
-        'PASSWORD': 'frwsaude',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
 }
 
 
@@ -142,13 +149,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static/'),
-#    '/home/frwsaude/frwsaude/static'
-#]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/'),
+    '/home/frwsaude/frwsaude/static'
+]
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+#STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 MEDIA_ROOT = (
   os.path.join(BASE_DIR, "media")
