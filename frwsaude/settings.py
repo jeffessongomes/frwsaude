@@ -95,12 +95,12 @@ WSGI_APPLICATION = 'frwsaude.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'frwsaude',
-        'USER': 'frwsaude',
-        'PASSWORD': 'techay1234',
-        'HOST': 'pgsql.frwsaude.net',
-        'PORT': '5432',
+        'USER': 'frwsaudeuser',
+        'PASSWORD': 'frwsaude',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -142,13 +142,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/'),
-    '/home/frwsaude/apps_wsgi/frwsaude/static'
-] 
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static/'),
+#    '/home/frwsaude/frwsaude/static'
+#]
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 MEDIA_ROOT = (
   os.path.join(BASE_DIR, "media")
