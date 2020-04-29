@@ -74,7 +74,7 @@ div#header div.header-info .container-img-desc .img-cover-desc{
 .btn-techay{
   background: rgb(34,193,195);
   background: linear-gradient(101deg, rgba(94,203,195,1) 0%, rgba(153,197, 95,1) 100%);
-  color: #FFF;
+  color: #000;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 20px;
