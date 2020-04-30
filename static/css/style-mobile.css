@@ -1,71 +1,70 @@
-@media only screen and (max-width: 968px) {
-  html{
-    overflow-x: hidden;
-  }
-  /* Mobile Header */
-
-  div#header{
-    background-image: #FFF;
-  }
-
-  div#header .bg-dark-tec{
-    background: transparent;
-  }
-
-  div#header .navbar-brand{
-    color: #FFF !important;
-  }
-
-  div#header .nav-link{
-    color: #FFF !important;
-  }
-
-  div#header div.header-info h2{
-    font-size: 1.8em;
-    color: #000;
-    font-weight: bold;
-  }
-
-  div#header div.header-info p{
-    padding: 10px 50px;
-    color: #E74C3C;
-  }
-
-  div#header .mobile-bars{
-    border-color: #FFF;
-    color: #FFF !important;
-  }
-
-  /* Editando a segurança */
-  div.desc-start .yt-video{
+@media only screen and (max-width: 980px) {
+  /* COVER */
+  div#cover-start .img-side-cover img{
     width: 100%;
-  }
-  
-  /* comentarios */
-  div.client-comment{
-    flex-direction: column;
-  }
-  div#client-say h3{
-    font-size: 2em;
+    margin-top: 20px;
   }
 
-  .img-cliente{
-    height: 100%;
+  /* VIDEO */
+  div#video-info .video-container video{
+    margin-top: 200px;
   }
-
-  /* ingredientes */
-  div#ingredientes .ingre-info h2{
-    font-size: 2em;
-  }
-
-  /* Uso */
-  div#container-uso .uso-info{
-    text-align: center;
-  }
-  div#container-uso .uso-info p{
+  div#video-info p{
     padding: 0;
   }
-  div#container-uso .uso-info h3{
-    font-size: 2em;
+
+
+  /* SOBRE */
+  div#sobre-product .img-right{
+    flex-direction: row;
+  }
+  div#sobre-product .info-product-desc{
+    align-items: center;
+  }
+  div#sobre-product .img-container-left{
+    display: flex;
+    justify-content: center;
+  }
+  
+  div#sobre-product .img-desc-product{
+    align-items: center;
+  }
+
+  div#sobre-product .mobile-layout--fix{
+    display: flex;
+    justify-content: center;
+  }
+
+  div#sobre-product .img-desc-product ul{
+    padding-inline-start: 0;
+  }
+
+  div#sobre-product .img-desc-product h4{
+    padding: 14px 0;
+    text-align: center;
+  }
+  div#sobre-product .img-desc-product .info-product-desc li{
+    text-align: center;
+    padding: 5px 0;
+  }
+
+
+  div#sobre-product .img-desc-product i{
+    display: none;
+  }
+
+  div#sobre-product .img-desc-product{
+    padding: 40px 0px;
+  }
+
+  /* parallax */
+  div#parallax{
+    background-attachment: scroll;
+  }
+
+  /* footer */
+
+  div#footer p{
+    padding: 5px 50px;
   }
 }

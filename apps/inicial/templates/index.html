@@ -1,341 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 {% load static %}
-
 <head>
-  <!-- Landing Page Criada por Jeffesson Gomes de Almeida -->
-  <!-- Página desenvolvida pela TecHAY -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FRWSAUDE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Frwsaude</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+  </style>
+  <script src="https://kit.fontawesome.com/e177f68271.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style-mobile.css' %}" />
-  <script src="https://kit.fontawesome.com/e177f68271.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="mobile-div">
-    <div id="header">
-      <div class="bg-dark-tec">
-        <nav class="navbar navbar-expand-lg navbar-light bg-menu-land">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="{% static 'img/logo.jpeg' %}" alt="">
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light menu-edit">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/logo.jpeg' %}" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-tec"
+        aria-controls="menu-tec" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu-tec">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#cover-start">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-product">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parallax">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link phone" href="#">
+              <span class="btn-cover">
+                <a class="btn-cto" href="https://wa.me/5512996608390">
+                  <div>
+                    <span class="text-btn-cto">(12) 99660-8390</span> 
+                  </div>
+                  <div class="btn-icon">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                </a>
+              </span>
             </a>
-            <button class="navbar-toggler mobile-bars type=" button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="fas fa-bars mobile-bars"></span>
-            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIM DO MENU -->
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#container-buy">COMPRE AQUI<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#ingredientes">SOBRE<span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
+  <!-- CAPA -->
+  <div id="cover-start">
+    <div class="container">
+      <div class="row cover-info">
+        <div class="col-12 col-lg-6">
+          <div class="">
+            <div class="title-cover">
+              <h1>Máscara de proteção</h1>
             </div>
-          </div>
-        </nav>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6">
-              <div class="header-info">
-                <h2>
-                  {{initial.title | safe}}
-                </h2>
-                <div class="container-img-desc">
-                  <img class="img-cover-desc" src="{% static 'img/garantia.jpeg' %}" />
+            <div class="desc-cover">
+              <img class="img-cover-desc" src="{% static 'img/desc-img.jpeg' %}" />
+            </div>
+            <div class="priceProduct-cover">
+              <h5>Apenas <span>R$ 4,90</span> a unidade</h5>
+            </div>
+            <div class="btn-cover">
+              <a class="btn-cto" href="https://wa.me/5512996608390">
+                <div>
+                  <span class="text-btn-cto">COMPRE A SUA</span> 
                 </div>
-                <p>
-                  {{initial.subtitle | safe}}
-                </p>
-                <a class="btn-techay btn-cto" href="">COMPRE A SUA</a>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 d-flex justify-content-center">
-              <div class="container-img-cover">
-                <img class="w-100 h-100" src="{% static 'img/img3.jpeg' %}" />
-              </div>
+                <div class="btn-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="divide-to-sec">
-          <div class="svg-border">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-              <path class="svg-edit" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
-              c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
-              c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
-            </svg>
+        <div class="col-12 col-lg-6">
+          <div class="img-side-cover">
+            <img src="{% static 'img/img3.jpeg' %}" />
           </div>
         </div>
       </div>
     </div>
-    <div class="desc-start">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <video src="{{video.video.url}}" controls class="yt-video" type="video/mp4"></video>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="desc-start-info">
-              <h3>
-                {{video.title}}
-              </h3>
-              <p>
-                {{video.details}}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  <!-- FIM DA CAPA -->
 
-    <!-- <div id="client-say">
+  <!-- VIDEO -->
+  <div id="video-info">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="client-info">
-            <h3>Nossos Clientes Estão Satisfeitos?</h3>
-            <p>Veja o que dizem:</p>
+          <div class="video-container">
+            <video class="img-thumbnail" src="{% static 'video/mascara_-_video.mp4' %}" controls></video>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="text-container-video-info">
+            <h2>EFICÁCIA E SEGURANÇA</h2>
+            <p>Mascara lavável e reutilizável. Concebida visando proteção e conforto. Sistema de amarração para proporcionar ajuste perfeito. Extremamente macia para causar menos irritação. Alça com elastano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO VIDEO -->
+  
+  <!-- SOBRE -->
+  <div id="sobre-product">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>SOBRE</h2>
+        </div>
+        <div class="col-12">
+          <div class="img-start-product">
+            <img class="img-thumbnail" src="{% static 'img/img1.jpeg' %}" />
+            <h3>Máscara de Proteção - APROVADA ANVISA</h3>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="img-desc-product">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="mobile-layout--fix">
+                  <img class="img-thumbnail" src="{% static 'img/img2.jpeg' %}" />
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="info-product-desc">
+                  <h4>Descrição do produto:</h4>
+                  <ul>
+                    <li>
+                      Máscara Lavável e Reutilizável (FFP) <i class="fas fa-circle"></i>
+                    </li>
+                    <li>
+                      Concebida visando a proteção e conforto <i class="fas fa-circle"></i>
+                    </li>
+                    <li>
+                      Sistema de amarração para proporcional ajuste perfeito <i class="fas fa-circle"></i>
+                    </li>
+                    <li>
+                      Extremamente macia para causar menos irritação <i class="fas fa-circle"></i>
+                    </li>
+                    <li>
+                      Alça com elastano <i class="fas fa-circle"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="img-desc-product">
+            <div class="row img-right">
+              <div class="col-12 col-lg-6 img-container-left">
+                <img class="img-thumbnail" src="{% static 'img/img3.jpeg' %}" />
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="info-product-desc info-product-desc-left">
+                  <h4>Características Técnicas do Produto:</h4>
+                  <ul>
+                    <li>
+                      <i class="fas fa-circle"></i> Composição máscara: 100% Poliamida 
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Composição alça: 85% Poliamida 15% Elastano 
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Medidas da máscara: 13,5 x 17 cm 
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Medidas da alça: 72cm (regulável) 
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Cores: Branco
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Tamanho: Único
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i> Nível de proteção: FFP
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div id="carouselT" class="carousel slide" data-ride="carousel"> 
-            <div class="carousel-inner" role="listbox">
-              {% for client in clients %}
-              <div class="carousel-item {% if client.pk == 1 %} active{% endif %}">
-                <div class="d-flex justify-content-center">
-                  <div class="client-comment">
-                    <div class="photo-profile">
-                      <img src="{% static 'img/blank_profile.png' %}" />
-                    </div>
-                    <div class="info-profile">
-                      <div class="name-profile">
-                        <h5>{{client.name}}</h5>
-                      </div>
-                      <div class="comment-profile">
-                        <p>
-                          {{client.details}}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+          <div class="d-flex justify-content-center">
+            <div class="btn-cover">
+              <a class="btn-cto" href="https://wa.me/5512996608390">
+                <div>
+                  <span class="text-btn-cto">COMPRE A SUA</span> 
                 </div>
-              </div>
-              {% endfor %}
-
-            </div>
-            <a class="carousel-control-prev" href="#carouselT" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselT" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        {% for Photo in Photo_Product %}
-          <div class="col-12 mt-4 col-lg-3">
-            <img  class="w-100 img-cliente img-fluid img-thumbnail" src="{{ Photo.photo.url }}" />
-          </div>
-        {% endfor %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex justify-content-center pt-4 pb-4">
-            <a class="btn-techay btn-cto" href="">COMPRE O SEU</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-    <!-- </div> -->
-    <div class="divide-to-garantia">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="svg-edit" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-        c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-        c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
-      </svg>
-    </div>
-    <div id="garantia">
-      <div class="img-garantia">
-        <img src="{% static 'img/garantia.jpeg' %}" />
-        <p>
-          Mascaras de Proteção regulamentadas pela RDC ANVISA n° 356 de 23/03/2020
-        </p>
-      </div>
-    </div>
-    <div class="divide-to-ingre">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="svg-edit" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-        c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-        c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
-      </svg>
-    </div>
-
-    <div id="ingredientes">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="ingre-info">
-              <h2>Sobre</h2>
-              <!-- <p>
-              {% for ingredient in ingredients %}
-                {{ingredient}}; 
-              {% endfor %}
-            </p> -->
-            </div>
-          </div>
-          <div class="col-4">
-            <img class="img-fluid rounded" src="{% static 'img/img2.jpeg' %}" />
-          </div>
-          <div class="col-4">
-            <img class="img-fluid rounded" src="{% static 'img/img1.jpeg' %}" />
-          </div>
-          <div class="col-4">
-            <img class="img-fluid rounded" src="{% static 'img/img2.jpeg' %}" />
-          </div>
-          {% for product in products %}
-          <div class="col-12 mt-1">
-            <div class="ingrediente-self">
-              <img src="{{product.image.url}}" />
-              <h4>{{product.name}}</h4>
-              <p>{{product.details}}</p>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-      </div>
-    </div>
-    <!-- <div class="divide-to-uso">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="svg-edit" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
-        c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
-        c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
-      </svg>
-    </div> -->
-    <!-- <div id="container-buy">
-      <div class="bg-buy">
-        <div class="divide-to-buy">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="svg-edit" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-          c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-          c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
-          </svg>
-
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="title">
-                <h2>Compre Agora</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            {% for product_prize in product_prizes %}
-            <div class="col-12 col-lg-4 mt-4">
-              <div class="buy-unid">
-                <h3>COMPRE {{product_prize.qnt}}</h3>
-                <div class="img-produto">
-                  <img src="{{product_prize.image.url}}" />
+                <div class="btn-icon">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
-                <p><span class="font-negr">R$ {{product_prize.preco_one}}</span> ou</p>
-                <p>POR {{product_prize.por_div}} DE</p>
-                <h2>R$ {{product_prize.prize_div}}</h2>
-                <a href="{{product_prize.buy_link}}">COMPRAR AGORA</a>
-              </div>
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div id="container-duvidas">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="info-duvidas">
-              <h3>Restou alguma dúvida?</h3>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="accordion" id="accordionT">
-
-              {% for doubt in doubts %}
-
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
-                      {{doubt.ask}}
-                    </button>
-                  </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionT">
-                  <div class="card-body">
-                    {{doubt.response | safe | linebreaks}}
-                  </div>
-                </div>
-              </div>
-
-              {% endfor %}
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    
-    <div class="divide-to-footer">
-      <div class="svg-border">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path class="svg-edit" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
-          c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
-          c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
-        </svg>
-      </div>
-    </div>
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="text-footer">
-              <p>{{footer.text | safe | linebreaks }}</p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="img-seguro">
-              <img src="{% static 'img/site-seguro-1.png' %}" />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="img-logo-techay">
-              <a href="https://www.hostpotiguar.com.br" target="_blank" data-toggle="tooltip" data-placement="top"
-                title="Desenvolvido por TecHAY">
-                <img class="logo-techay" src="{% static 'img/NEW_LOGO_TecHAY.png' %}" />
               </a>
             </div>
           </div>
@@ -343,6 +218,46 @@
       </div>
     </div>
   </div>
+  <!-- FIM DO SOBRE -->
+  <!-- PARALLAX -->
+  <div id="parallax">
+    <div class="title">
+      <h2>FRETE GRÁTIS PARA TODO O BRASIL</h2>
+      <p>(Pedidos acima de 100 unidades)</p>
+      <h4>COMPRE DIRETAMENTE CONOSCO</h4>
+      <div class="d-flex justify-content-center">
+        <a class="nav-link phone" href="#">
+          <span class="btn-cover">
+            <a class="btn-cto" href="https://wa.me/5512996608390">
+              <div>
+                <span class="text-btn-cto">(12) 99660-8390</span> 
+              </div>
+              <div class="btn-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+            </a>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- FIM PARALLAX -->
+  <!-- RODAPE -->
+
+  <div id="footer">
+    <div>
+      <img src="{% static 'img/logo.jpeg' %}" />
+      <p>Esperamos que essa crise passe
+        o mais rápido possível e que tenhamos
+        poucas perdas nessa guerra!
+      </p>
+      <a href="https://www.hostpotiguar.com.br" target="_blank" >
+        <img class="logo-techay" src="{% static 'img/NEW_LOGO_TecHAY.png' %}" alt="Logo da TecHAY" data-toggle="techay" data-placement="top" title="Desenvolvido por TecHAY" />
+      </a>
+    </div>
+  </div>
+
+  <!-- FIM RODAPE -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -352,11 +267,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+    <script>
+      $(function () {
+        $('[data-toggle="techay"]').tooltip()
+      })
+    </script>
 </body>
 
 </html>
