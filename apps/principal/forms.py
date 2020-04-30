@@ -1,7 +1,7 @@
 from django import forms
 from apps.inicial.models import Doubt, Client, PhotoProdutoAfterBefore
 from .models import Product, Ingredients, Contact, Initial, How_Use, How_Use_Text, Video_Description, ProductsPrize
-from .models import Footer
+from .models import Footer, Value
 
 
 class DoubtForm(forms.ModelForm):
@@ -131,6 +131,20 @@ class FooterForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(FooterForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            if field.widget.attrs.get('class'):
+                field.widget.attrs['class'] += ' form-control'
+            else:
+                field.widget.attrs['class']='form-control'
+
+
+class ValueForm(forms.ModelForm):
+    class Meta:
+        model = Value
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(ValueForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             if field.widget.attrs.get('class'):
                 field.widget.attrs['class'] += ' form-control'

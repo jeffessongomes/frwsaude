@@ -16,6 +16,15 @@ class Product(models.Model):
 
 	def __str__(self):
 		return self.name
+
+
+class Value(models.Model):
+	value = models.CharField(max_length=255)
+
+	def __str__(self):
+		return self.value
+
+
 		
 class Contact(models.Model):
 	name = models.CharField(max_length=255)

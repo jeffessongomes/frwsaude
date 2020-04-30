@@ -37,6 +37,8 @@ urlpatterns = [
 
    path('edit_initial', views.edit_initial, name="edit_initial"),
 
+   path('edit_value', views.edit_value, name="edit_value"),
+
    path('edit_how_text', views.edit_how_text, name="edit_how_text"),
 
    path('edit_video_description', views.edit_video_description, name='edit_video_description'),

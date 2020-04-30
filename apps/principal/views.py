@@ -7,9 +7,9 @@ from django.contrib.auth import login, authenticate, logout
 
 from apps.inicial.models import Doubt, Client, PhotoProdutoAfterBefore
 from .models import Product, Ingredients, Contact, Initial, How_Use, Video_Description, How_Use_Text, TecDashImages
-from .models import ProductsPrize, Footer
+from .models import ProductsPrize, Footer, Value
 from .forms import DoubtForm, ClientForm, ProductForm, IngredientsForm, CaseForm, VideoDescriptionForm
-from .forms import InitialForm, HowUseForm, HowUseTextForm, ProductPrizeForm, FooterForm
+from .forms import InitialForm, HowUseForm, HowUseTextForm, ProductPrizeForm, FooterForm, ValueForm
 
 from django.core.mail import send_mail
 from django.core import mail
@@ -27,6 +27,29 @@ def index(request):
   }
 
   return render(request, 'dashboard/dashboard.html', context)
+
+
+# crud initial
+@login_required(login_url='login')
+def edit_value(request):
+  data = {}
+  value = Value.objects.get(pk=1)
+  
+  if request.method == 'POST':
+    form = ValueForm(data=request.POST, instance=value)
+    if form.is_valid():
+      form.save()
+      return redirect('index')
+    else:
+      
+     HttpResponse(json.dumps(form.errors))
+  else:
+    form = ValueForm(instance=value)
+
+  data['form'] = form; data['value'] = value;
+
+  return render(request, 'dashboard/value/edit-value.html', data)
+
 
 def verifify_user(email, password):
   try:
